@@ -1,38 +1,47 @@
 package pl.oskarprzymus.climbeq;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class GearService {
-    public List<Gear> getAllGear() {
-        return List.of(new Gear("Crash Pad"),new Gear("Shoes"),new Gear("Rope"));
+
+    private final GearRepository gearRepository;
+
+    public Iterable<Gear> getAllGear() {
+        return gearRepository.findAll();
     }
 
     public Gear getGearById(final UUID id) {
-        return new Gear("Czekan");
+        return gearRepository.findById(id)
+                .orElseThrow(); // TODO custom exception
+
     }
 
-    public Gear createGear(final Gear gear) {
+    public Gear createGear(Gear gear) {
         gear.setId(UUID.randomUUID());
 
-        //TODO save to DB
+        gear = gearRepository.save(gear);
 
         return gear;
     }
 
     public Gear updateGear(final UUID id, final Gear gear) {
-        Gear gearDB = new Gear("Generic gear");
+        Gear gearDB = gearRepository.findById(id)
+                .orElseThrow(); //TODO custom exception
+
         gearDB.setName(gear.getName());
 
-        //TODO update in DB
+        gearDB = gearRepository.save(gearDB);
 
         return gearDB;
     }
 
     public void deleteGear(final UUID id) {
-        //TODO delete in DB
+        gearRepository.deleteById(id);
     }
 }

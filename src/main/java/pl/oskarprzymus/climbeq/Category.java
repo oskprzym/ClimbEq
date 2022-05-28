@@ -12,7 +12,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
-public class Gear {
+public class Category {
 
     @Id
     private UUID id;
@@ -20,15 +20,5 @@ public class Gear {
     private String name;
 
     @ManyToMany
-    private Set<Category> categories;
-
-    public Gear() {
-        id = UUID.randomUUID();
-    }
-
-    public Gear(final String name){
-        this();
-        this.name=name;
-    }
-
+    private Set<Gear> gearSet;
 }

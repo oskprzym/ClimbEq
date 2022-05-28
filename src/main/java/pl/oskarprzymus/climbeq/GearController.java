@@ -1,9 +1,9 @@
 package pl.oskarprzymus.climbeq;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -14,7 +14,7 @@ public class GearController {
     private final GearService gearService;
 
     @GetMapping
-    List<Gear> getAllGear(){
+    Iterable<Gear> getAllGear(){
         return gearService.getAllGear();
     }
 
@@ -24,6 +24,7 @@ public class GearController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     Gear createGear(@RequestBody Gear gear){
         return gearService.createGear(gear);
     }
@@ -34,6 +35,7 @@ public class GearController {
     }
 
     @DeleteMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteGearById(@PathVariable UUID id){
         gearService.deleteGear(id);
     }
