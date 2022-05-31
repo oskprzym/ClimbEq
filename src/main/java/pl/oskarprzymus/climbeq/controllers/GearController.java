@@ -1,8 +1,10 @@
-package pl.oskarprzymus.climbeq;
+package pl.oskarprzymus.climbeq.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import pl.oskarprzymus.climbeq.domain.Gear;
+import pl.oskarprzymus.climbeq.services.GearService;
 
 import java.util.UUID;
 

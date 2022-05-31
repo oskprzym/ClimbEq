@@ -1,7 +1,10 @@
-package pl.oskarprzymus.climbeq;
+package pl.oskarprzymus.climbeq.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import pl.oskarprzymus.climbeq.domain.Gear;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,6 +15,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Category {
 
     @Id

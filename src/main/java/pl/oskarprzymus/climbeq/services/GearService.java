@@ -1,9 +1,10 @@
-package pl.oskarprzymus.climbeq;
+package pl.oskarprzymus.climbeq.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import pl.oskarprzymus.climbeq.domain.Gear;
+import pl.oskarprzymus.climbeq.repositories.GearRepository;
 
-import java.util.List;
 import java.util.UUID;
 
 @Service

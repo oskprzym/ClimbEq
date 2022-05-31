@@ -1,8 +1,8 @@
-package pl.oskarprzymus.climbeq;
+package pl.oskarprzymus.climbeq.repositories;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+import pl.oskarprzymus.climbeq.domain.Gear;
 
 import java.util.UUID;
 
