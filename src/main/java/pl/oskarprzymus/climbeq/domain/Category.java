@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import pl.oskarprzymus.climbeq.domain.Gear;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

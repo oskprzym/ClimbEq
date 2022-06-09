@@ -1,6 +1,7 @@
 package pl.oskarprzymus.climbeq.domain;
 
-public enum EmployeeRole {
+public enum Role {
+    MANAGER,
     EMPLOYEE,
-    MANAGER
+    USER
 }

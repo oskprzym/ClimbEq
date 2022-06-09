@@ -3,6 +3,7 @@ package pl.oskarprzymus.climbeq.domain;
 import lombok.*;
 import org.hibernate.Hibernate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Digits;
@@ -16,8 +17,7 @@ import java.util.UUID;
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
+//@Builder
 @Entity(name = "clients")
 public class Client {
 

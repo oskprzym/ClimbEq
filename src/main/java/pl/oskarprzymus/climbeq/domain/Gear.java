@@ -17,7 +17,7 @@ import java.util.UUID;
 @Entity
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 public class Gear {
 
     @Id
@@ -26,8 +26,6 @@ public class Gear {
     private String name;
 
     private int priceInCents;
-
-    private String description; //TODO Extract a description class with various options
 
     @ManyToMany
     @ToString.Exclude

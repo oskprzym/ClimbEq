@@ -14,7 +14,6 @@ import java.util.UUID;
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor
-@AllArgsConstructor
 public class Employee {
 
     @Id
@@ -26,7 +25,7 @@ public class Employee {
 
     private int salaryInCents;
 
-    private EmployeeRole role;
+    private Role role;
 
     @Override
     public boolean equals(final Object o) {
