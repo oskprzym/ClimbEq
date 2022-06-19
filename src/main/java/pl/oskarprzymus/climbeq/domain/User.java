@@ -15,7 +15,7 @@ import java.util.UUID;
 @Setter
 @ToString
 @RequiredArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 //@Builder
 @Entity(name = "users")
 public class User {

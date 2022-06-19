@@ -9,7 +9,7 @@ import pl.oskarprzymus.climbeq.services.GearService;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("api/v1/gear")
+@RequestMapping("gear")
 @RequiredArgsConstructor
 public class GearController {
 
